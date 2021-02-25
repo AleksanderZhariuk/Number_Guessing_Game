@@ -3,6 +3,10 @@ import os
 from art import logo
 
 
+EASY_DIFFICULTY = 10
+HARD_DIFFICULTY = 5
+
+
 def take_a_random_number():
 	numbers = []
 	for number in range(1, 101):
@@ -35,10 +39,9 @@ def choose_difficulty():
 	answer = incorrect_answer("Choose a difficulty. Type 'easy' or 'hard': ", str)
 
 	if answer == 'easy':
-		tries = 10
+		return EASY_DIFFICULTY
 	else:
-		tries = 5
-	return tries
+		return HARD_DIFFICULTY
 
 
 def compare_answer(number, correct_number):
